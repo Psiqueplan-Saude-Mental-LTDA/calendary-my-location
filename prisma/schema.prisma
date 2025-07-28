@@ -6,3 +6,14 @@ datasource db {
   provider = "sqlite"
   url      = "file:./dev.db"
 }
+
+model EventSchedule {
+  id                Int      @id @default(autoincrement())
+  startDateTime     DateTime
+  endDateTime       DateTime
+  eventName         String
+  responsibleName   String
+  responsiblePhone  String
+  description       String
+  price             Float
+}
