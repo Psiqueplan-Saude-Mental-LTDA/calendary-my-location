@@ -42,10 +42,12 @@ export default function CreateSchedulePage() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="p-4 max-w-md mx-auto space-y-4"
-    >
+    <div className="max-w-xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-6 text-center">Cadastrar Agendamento</h1>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-4 bg-white p-6 rounded-lg shadow"
+      >
       <div>
         <Input {...register('eventName')} placeholder="Nome do evento" />
         {errors.eventName && (
@@ -92,7 +94,12 @@ export default function CreateSchedulePage() {
           <p className="text-red-500 text-sm">{errors.price.message}</p>
         )}
       </div>
-      <Button type="submit">Cadastrar</Button>
-    </form>
+        <div className="pt-2">
+          <Button type="submit" className="w-full">
+            Cadastrar
+          </Button>
+        </div>
+      </form>
+    </div>
   )
 }
