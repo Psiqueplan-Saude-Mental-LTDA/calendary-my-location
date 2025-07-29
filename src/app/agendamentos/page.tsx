@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { useSchedules } from '@/hooks/useSchedules'
 import Loading from '@/components/Loading'
 import ErrorMessage from '@/components/ErrorMessage'
+import Input from '@/components/Input'
 
 export default function AgendamentosPage() {
   const { data: schedules = [], isLoading, error } = useSchedules()
@@ -25,19 +27,22 @@ export default function AgendamentosPage() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Agendamentos</h1>
-      <input
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Agendamentos</h1>
+        <Link href="/agendamentos/cadastrar" className="text-blue-500">Novo</Link>
+      </div>
+      <Input
         type="text"
         value={search}
         onChange={e => setSearch(e.target.value)}
-        className="border rounded w-full p-2 mb-4"
+        className="mb-4"
         placeholder="Buscar por evento ou responsável"
       />
-      <input
+      <Input
         type="date"
         value={date}
         onChange={e => setDate(e.target.value)}
-        className="border rounded w-full p-2 mb-4"
+        className="mb-4"
       />
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map(schedule => (
