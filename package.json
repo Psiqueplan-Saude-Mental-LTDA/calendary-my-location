@@ -18,17 +18,20 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "latest",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss-animate": "^1.0.7",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.16",
     "zod": "latest"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "prisma": "latest",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^3.4.1",
     "typescript": "latest"
   }
 }
