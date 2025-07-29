@@ -26,6 +26,7 @@
     "tailwindcss": "latest",
     "postcss": "latest",
     "autoprefixer": "latest",
+    "@tailwindcss/postcss": "latest",
     "prisma": "latest"
   }
 }
