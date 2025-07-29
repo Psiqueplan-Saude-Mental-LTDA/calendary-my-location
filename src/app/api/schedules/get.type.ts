@@ -25,7 +25,7 @@ export async function GET() {
       }).format(value)
 
     const result: Schedule[] = events.map(event => ({
-      id: event.id,
+      id: String(event.id),
       startDateTime: event.startDateTime.toLocaleString('pt-BR'),
       endDateTime: event.endDateTime.toLocaleString('pt-BR'),
       eventName: event.eventName,
@@ -37,6 +37,7 @@ export async function GET() {
 
     return NextResponse.json(result)
   } catch (error) {
+    console.error("error", error)
     return NextResponse.json(
       { error: 'Falha ao buscar agendamentos' },
       { status: 500 }

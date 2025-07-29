@@ -9,24 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.0",
+    "@prisma/client": "latest",
+    "@tanstack/react-query": "latest",
+    "axios": "latest",
+    "lucide-react": "^0.532.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "@tanstack/react-query": "latest",
     "react-hook-form": "latest",
-    "zod": "latest",
-    "axios": "latest",
-    "@prisma/client": "latest"
+    "zod": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
+    "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "tailwindcss": "latest",
-    "postcss": "latest",
-    "autoprefixer": "latest",
-    "@tailwindcss/postcss": "latest",
-    "prisma": "latest"
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "prisma": "latest",
+    "tailwindcss": "^4.1.11",
+    "typescript": "latest"
   }
 }

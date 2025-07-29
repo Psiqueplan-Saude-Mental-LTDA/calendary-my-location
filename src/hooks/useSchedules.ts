@@ -8,5 +8,9 @@ async function fetchSchedules() {
 }
 
 export function useSchedules() {
-  return useQuery(['schedules'], fetchSchedules)
+  return useQuery({
+    queryKey: ['schedules'],
+    queryFn: fetchSchedules,
+    refetchOnWindowFocus: false,
+  })
 }
